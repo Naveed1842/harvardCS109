@@ -1,0 +1,588 @@
+/*
+  Stylesheet master for the Distance Ed site
+  Built for Harvard University Extension School
+  by Hanerino, Inc.
+  Modified by Hanerino: 2010-09-14
+  Modified by KHD: 2011-3-14
+  Modified by KHD: 2011-06-07: add #shield-summer style  
+  Modified by KHD: 2011-06-21: publicationListing.shtml style
+  Modified by KHD: 2012-06-29: wider preferences popup for new text
+  Modified by KHD: 2012-07-09: Removed Pub listing style to ease style changes
+              - Publication listing style is in separate file screen-pubList.css
+  Modified by KHD: 2012-09-14: Adding new banner header style for ext & sum.
+  	   keeping old header style to support pages already published with generated headers.
+  Modified by KHD: 2014-04-09: Harvard Extension look to links, special highlight for matterhorn link
+ */
+/* Base Common Style, Initial style setup */
+/*  ---------------------------------------*/
+body {
+    color : #222;
+    font : 62.5% / 1.3em Helvetica, Arial, sans-serif;
+    margin : 0;
+    padding : 0;
+    text-align : center;
+    /* background: #FFF url("../images/bg-header.png") repeat-x;*/
+    /* Header bar 8x82px*/
+}
+
+a:link, a:visited {
+    border-bottom: medium none;
+    color: #347AB0;
+    opacity: 1;
+    text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+hr,
+.ineffable {
+    display : none;
+}
+
+.h1 {
+    white-space : nowrap;
+}
+
+h1,
+h2,
+.h1,
+.h2 {
+    font-weight : normal;
+    line-height: normal;
+    text-transform : uppercase;
+}
+
+h3,
+h4 {
+    font-family: "Georgia","Times New Roman",Helvetica,Arial,sans-serif;
+    font-weight : normal;
+    padding-bottom : 1px;
+}
+
+h4 {
+    font-weight : bold;
+    margin-bottom : .1em;
+}
+
+/* Tighten up content, leave details box wider */
+#header,
+#content,
+#footer {
+    margin : 0;
+    clear : both;
+    padding : 0px 10px;
+}
+
+/* Container styles to wrap around body content */
+/*  ---------------------------------------*/
+#container {
+    font-size : 1.2em;
+    margin : 0 auto;
+    margin-left : 0px;
+    text-align : left;
+    /* position:absolute; */
+    left : 0px;
+    top : 0px;
+    /*  max-width: 986px; 
+		position: relative;
+	*/
+}
+
+/* Header styles */
+/*  ---------------------------------------*/
+
+#content-header {
+    margin-bottom : 3px;
+}
+
+/* #header is obsolete, replaced with #header-banner-ext and -sum as of Sept 2012 -KHD */
+#header {
+    background : #FFF url("../images/bg-header.png") repeat-x;
+    height : 56px; /* height of bg-header.png */
+    color : #FFE;
+    letter-spacing : 0.03em;
+    font-family : "Times New Roman", Times, serif;
+    margin : 0;
+    padding : 0;
+}
+
+#header a {
+    background : url("../images/logo-extension.png") no-repeat 0 6px;
+    color : #F4F4F4;
+    display : block;
+    height : 44px;
+    padding : 9px 0 0px 42px;
+    text-decoration : none;
+    margin-left : 5px;
+}
+
+#header .shield-summer {
+    background : url("../images/logo-summer.png") no-repeat 0 6px;
+}
+
+
+#header span.h1 {
+    font-size : 14px;
+    line-height : 15px;
+    margin : 0 0 4px;
+}
+
+#header span.h2 {
+    font-size : 13px;
+    margin : 4px 0 10px;
+    white-space : nowrap;
+}
+
+
+/* CSS for updated Harvard Banner Sept 21012 */
+.banner-link {
+/*    background-image : url("http://www.extension.harvard.edu/sites/extension.harvard.edu/themes/extension/images/masthead.png"); */
+    background-position : 0 -50px;
+    background-repeat : no-repeat;
+    display : block;
+    height : 0;
+    width : 500px;
+    overflow : hidden;
+    padding-top : 50px;
+    text-decoration: none;
+}
+.banner-link:hover {
+    background-position : 0 0px;
+}
+
+#header-banner-ext, #header-banner-fas {	
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#header-banner-ext #harvard .banner-link {
+	background-image: url('/images/masthead-ext.png');
+}
+
+#header-banner-sum {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+#header-banner-sum #harvard .banner-link {
+	background-image: url('/images/masthead-sum.png');
+}
+
+#header-banner-fas #harvard .banner-link {
+	background-image: url('/images/banner-fas.png');
+}
+
+#header-banner-fas #harvard {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#header-banner-fas #harvard .banner-link-fas {
+    background-image: url("/images/banner-fas.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 45px;
+}
+
+.banner-link-fas span  {
+    display: none;
+}
+
+/* -- end new banner style -- */
+
+/* Content styles */
+#content {
+    padding-bottom : 3px;
+    padding-top : 7px;
+    position : static;
+    z-index : 200;
+}
+
+.figure {
+    float : left;
+    border : 1px solid #999;
+    margin : 0 20px 20px 0;
+}
+
+#content h3 {
+    color : #000;
+    font-size : 1.6em;
+    line-height : 1.4em;
+    margin : 0;
+}
+
+#content h4 {
+    font-size : 1.3em;
+    line-height : 1.2em;
+    margin : 0 0 .2em;
+}
+
+.h5 {
+    font-size : 1.1em;
+    white-space : nowrap;
+    color : #8B8B8B;
+}
+
+#content p {
+    font-size : 1.2em;
+    line-height : 1.2em;
+}
+
+/* Course title and nav links */
+#course-title { /* float: left; */
+    margin-right : 7em;
+}
+
+/*Added KHD, to left align content */
+#content-listing {
+    clear : both;
+    position : relative;
+}
+
+#course-msg {
+    color: #545454;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+    padding-left: 20px;
+}
+.bell {
+    background: url("../images/icommons_note_bell_yellow.png") no-repeat scroll 0 0.1em rgba(0, 0, 0, 0);
+}
+#course-msg p {
+    margin: 0.2em 0;
+}
+
+#matterhorn-message {
+    border-right: 10px none;
+    color: #121212;
+    font-family: "OpenSans","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 3px;
+}
+#matterhorn-message span {
+    background-color: #EDD0A7;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* Secondary nav links */
+/*  ---------------------------------------*/
+#nav-extras ul,
+#content-legend ul,
+#course-msg ul,
+#synch-video {
+    list-style : none;
+    padding : 0;
+    margin : 0;
+    white-space : nowrap;
+    color : #8B8B8B;
+}
+
+#nav-extras {
+    width : 100%; /* assumes nav-extras starts below course-title */
+}
+
+#nav-extras li {
+    float : left;
+    font-size : 1.1em;
+    line-height : 1.2em;
+    padding-right : 20px;
+}
+
+#nav-extras li.nav-preferences {
+    margin-left : 0;
+}
+
+#nav-extras li a {
+    background : url("../images/icon-preferences.png") no-repeat 0 50%;
+    color : #8B8B8B;
+    display : block;
+    padding : 0 0 0 21px;
+}
+
+#nav-extras li.nav-problem a {
+    background-image : url("../images/icon-problem.png");
+    padding-left : 19px;
+}
+
+#nav-extras li.nav-help a {
+    background-image : url("../images/icon-help.png");
+    padding-left : 17px;
+}
+#nav-extras li.nav-feedback a {
+    background-image : url("../images/icon-feedback.png");
+    padding-left : 17px;
+}
+#nav-extras li.nav-list a {
+    background-image : url("../images/backToListWhite.png");
+    padding-left : 21px;
+}
+
+/* Sorting */
+#sort-legend {
+    text-transform : uppercase;
+}
+
+#sort-legend h5,
+#sort-legend button #conent-legend h5 {
+    display : inline;
+    font-size : 1em;
+    font-weight : normal;
+    margin : 0;
+}
+
+/* Production Page */ 
+/* ---------------------------- */
+.listLinkIcon {
+    background : url("../images/icon-list.png") no-repeat 0 16px;
+}
+
+/* Video preferences window popup */
+/*  ---------------------------------------*/
+#preferences-window {
+    padding : 10px;
+    width : 320px;
+}
+
+#preferences-desc {
+    float : left;
+    margin-right : 5%;
+    width : 310px;
+}
+
+#preferences-types {
+    float : left;
+    width : 310px;
+    margin-left : 0px;
+    margin-top : 15px;
+}
+
+#preferences-window h5 {
+    font-size : 1.2em;
+    font-weight : bold;
+    margin : .5em 0;
+    text-transform : uppercase;
+}
+
+#preferences-window p {
+    font-size : 1em;
+    margin : .5em 0;
+}
+
+#preferences-window a {
+    color : #444;
+}
+
+#preferences-window a.link-preferences {
+    background : url("../images/icon-preferences.png") no-repeat 2px 50%;
+    padding-left : 23px;
+}
+
+#preferences-window #preferences-checkbox {
+    font-size : 1.1em;
+    margin : 1.8em 0 0;
+    text-transform : uppercase;
+}
+
+#preferences-window #preferences-checkbox span {
+    display : block;
+    margin-top : -15px;
+    padding-left : 20px;
+}
+
+#preferences-window dl {
+    margin : .5em 0;
+}
+
+#preferences-window dt {
+    background : url("../images/pref-default.png") no-repeat 0 50%;
+    font-size : 1.3em;
+    line-height : 25px;
+    padding-left : 40px;
+    text-transform : uppercase;
+}
+
+#preferences-window dt.pref-multi-window {
+    background-image : url("../images/pref-multi-window.png");
+}
+
+#preferences-window dt.pref-lan {
+    background-image : url("../images/pref-lan.png");
+}
+
+#preferences-window dt.pref-dialup {
+    background-image : url("../images/pref-dialup.png");
+}
+
+#preferences-window dd {
+    color : #535353;
+    font-style : italic;
+    margin : -.5em 0 1em;
+    padding-left : 62px;
+}
+
+/* Materials Style */ 
+
+#synch-video {
+    background : url("../images/synchMovieIcon3.png") no-repeat 0 .1em;
+    padding-left : 25px;
+    line-height : 1.5em;
+    font-size : .9em;
+    margin : .8em .8em;
+}
+
+/* Footer styles */ /*  ---------------------------------------*/
+#footer {
+    border-top : 1px solid #CCC;
+    color : #666;
+    font-size : 1.1em;
+    padding : 10px 10px 10px;
+    text-align : left;
+    /* min-width: 540px;*/
+    line-height : 1.2em;
+}
+
+#footer a,
+.list-note a {
+    color : #5C5D60;
+}
+
+#footer a {
+    white-space : nowrap;
+}
+
+#footer-logo {
+    background : url("../images/logo-extension-small.png") no-repeat 0 3px;
+    font-family : Georgia, Baskerville, "Times New Roman", Times, serif;
+    float : left;
+    margin-bottom : 10px;
+    padding : 0 0 0 27px;
+    text-transform : uppercase;
+    width : 185px;
+}
+
+#footer-logo span {
+    display : block;
+}
+
+#footer-copyright {
+    float : right;
+    margin-left : 10px;
+    margin-bottom : 10px;
+}
+
+#footer ul {
+    display : inline;
+    list-style : none;
+    margin : .4em 0 0;
+    padding : 0;
+}
+
+#footer ul li {
+    display : inline;
+    padding : 0 0 0 10px;
+    white-space : nowrap;
+}
+
+/* Move accessibility items off view range */
+.video-control-accessible{
+    position: absolute;
+    width: 10em;
+    left: -999em;
+}
+
+/* Help Page Style */
+/* -------------- */
+
+.help-page .banner {
+	width: 100%
+}
+
+.help-page .banner-link {
+	width: 960px;
+	margin: auto;
+}
+
+.help-page  #content, .help-page #footer {
+	background: none repeat scroll 0 0 white;
+    margin: auto;
+    max-width: 960px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.help-page #content ul, #help-prefs-grid td, .help-paragraph  {
+    font-size: 1em;
+}
+
+
+.help-page #content p {
+  font-size:1em;
+}
+
+.help-paragraph td {
+    vertical-align: top;
+}
+
+.help-topic,.help-sub-topic {
+	font-weight: bold;
+	font-size: 1.3em;
+	line-height: 1.4em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.help-sub-topic {
+	font-size: 1.1em;
+	line-height: 1.3em;
+	font-style: italic
+}
+
+.help-desc {
+	margin-left: 10px;
+}
+
+.help-desc-less {
+	display: hidden;
+}
+
+.help-page table {
+	border-style: none;
+}
+.help-nav-title {
+	font-style:italic;
+}
+
+#help-prefs-grid td {
+	padding: 0.2em;
+	vertical-align: top;	
+}
+
+.help-pref-title {
+	width:120px;
+}
+
+/* Multipurpose Float clearing */
+/*  ---------------------------------------*/
+#sort-legend:after,
+#course-msg:after,
+#nav-extras ul:after,
+#nav-extras:after,
+#page-head:after,
+#sort-legend:after,
+#content-legend:after,
+#content-listing:after,
+#preferences-window:after,
+#footer:after
+{
+    clear : both;
+    content : ".";
+    display : block;
+    height : 0;
+    visibility : hidden;
+}

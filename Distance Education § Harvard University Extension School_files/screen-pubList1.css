@@ -1,0 +1,207 @@
+/*
+  Stylesheet for the Distance Ed site
+  Built for Harvard University Extension School
+  Publication Listing, 1-3 column publication block look
+  - KHD: 2012-07-07: Pub list style extracted from screen-2.css 
+  
+ */
+
+/* Sort & Legend 
+*  ---------------------------------------*/
+#content-sort,
+#content-legend,
+#content-layout {
+    float:left;
+    line-height:2em;
+    margin:0;
+}
+
+#content-sort,
+#content-layout {
+    margin-right:10px;
+    display:none;
+    /* Default to no show, requires JavaScript to display*/
+}
+
+/* Legend */
+/*  ---------------------------------------*/
+
+#content-legend{
+    width:340px;
+}
+
+#content-legend ul,
+#content-legend li{
+    display:inline;
+}
+
+#content-legend li{
+    background:url("../images/legend-lecture.png") no-repeat 0 50%;
+    line-height:18px;
+    margin-right:10px;
+    padding:8px 0 8px 21px;
+}
+
+#content-legend li.legend-section{
+    background-image:url("../images/legend-section.png");
+}
+
+#content-legend li.legend-other{
+    background-image:url("../images/legend-other.png");
+}
+
+/* List boxes 
+ *  ---------------------------------------*/
+.list-asset{
+    padding-top:15px;
+}
+
+.list-publication{
+    margin-left:37px;
+}
+
+.list-asset li {
+    overflow: hidden;
+    margin-bottom: 0.1em;
+}
+
+.list-block{
+    background:url("../images/bar-grey.png") no-repeat 0 0;
+    display:inline-block;
+    margin:1em 28px 1.3em 0;
+    padding:8px 8px 0 16px;
+    width:266px;
+}
+
+.list-block.current{
+    background-color:#FAFAD2;
+    background-image:url("../images/bar-red.png");
+}
+
+.list-block .list-week{
+    background:url("../images/border-double.png") repeat-x 0 100%;
+    color:#666;
+    padding-bottom:5px;
+}
+
+.list-block dt.list-date,
+.list-block .list-date{
+    color:#666;
+    float:left;
+    height:49px;
+    text-align:center;
+    width:36px;
+    clear:left;
+}
+
+.list-block dt.list-date span,
+.list-block .list-date span{
+    background:url("../images/date-lecture.png") no-repeat 0 0;
+    color:#9F9F30;
+    display:block;
+    font-size:18px;
+    height:36px;
+    letter-spacing:-1px;
+    line-height:36px;
+    width:36px;
+}
+
+.list-block dt.list-date.list-section span,
+.list-block .list-section span{
+    background-image:url("../images/date-section.png");
+    color:#6FA3A7;
+}
+
+.list-block dt.list-date.list-other span,
+.list-block .list-other span{
+    background-image:url("../images/date-other.png");
+    color:#416540;
+}
+
+.list-block .list-type{
+    color:#000;
+    font-size:1.4em;
+    font-weight:normal;
+    padding:16px 0 5px 5px;
+    text-transform:uppercase;
+    line-height:1em;
+}
+
+/* added for additional anchor */
+/*  ---------------------------------------*/
+dd.list-type a,
+dd.list-description a,
+.list-type a,
+.list-description a
+
+{
+    text-decoration:none;
+    color:#000;
+}
+
+dd.list-type a:hover,
+dd.list-description a:hover,
+.list-type a:hover,
+.list-description a:hover{
+    color:maroon;
+}
+
+.list-block .list-description{
+    color:#444;
+    font-size:1.2em;
+    line-height:1em;
+    padding:0 0 5px 5px;
+    font-style:italic;
+}
+
+.list-block .list-note{
+    background:url("../images/icon-note.png") no-repeat 0 .1em;
+    color:#545454;
+    font-size:1.1em;
+    line-height:1.2em;
+    margin-bottom:.8em;
+    padding-left:20px;
+    margin-left: 12px;
+}
+
+.list-note-date{
+    font-weight:bold;
+}
+
+.list-block .pub-note{
+    color:#545454;
+    font-size:1.1em;
+    line-height:1.2em;
+    margin-bottom:.8em;
+}
+
+/* Publication Listing list style - 20 Oct 2011 */
+ul#content-listing,
+ul.list-asset
+{
+    list-style-type:none;
+    padding-left:0;
+    margin-left:0;
+    overflow:hidden; /* for IE9 */
+}
+
+.list-week{
+    padding-bottom:10px;
+}
+
+ul #content-listing{
+    display:table;
+}
+li .list-block{
+    display:table-cell;
+}
+ul .list-asset{
+    width:100%;
+    display:table;
+}
+
+ul.list-publication
+{
+    list-style-type:none;
+    padding-left:0;
+}
